@@ -47,13 +47,15 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const validation = this.formValidation()  
-    if(validation.coorect) {
+    const validation = this.formValidation()
+    console.log(validation);
+    if(validation.correct) {
       this.setState({
         username: '',
         email: '',
         pass: '',
         accept: false,
+        message: 'The form has been sent',
 
         errors: {
           username: false,
@@ -107,6 +109,14 @@ class App extends Component {
     })
   }
 
+  componentDidUpdate() {
+    if (this.state.message !== '') {
+      setTimeout(() => this.setState({
+        message: ''
+      }), 3000)
+    }
+  }
+
   render() {
     return (
       <div>
@@ -149,6 +159,7 @@ class App extends Component {
 
           <button>Save</button>
         </form>
+        {this.state.message && <h3>{this.state.message}</h3>}
       </div>
     )
   }
