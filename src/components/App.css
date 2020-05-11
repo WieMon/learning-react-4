@@ -22,3 +22,8 @@ button {
   display: block;
   max-width: 200px;
 }
+
+span {
+  color: red;
+  font-size: 16px;
+}
