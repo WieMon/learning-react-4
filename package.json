@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "ini": "^2.0.0",
     "node-identifier": "^0.5.1",
+    "node-notifier": "^9.0.0",
     "node-sass": "^4.14.1",
     "object-path": "^0.11.5",
     "react": "^16.13.1",
